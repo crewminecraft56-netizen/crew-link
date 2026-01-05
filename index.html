@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chia sẻ link tải</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        a {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Dán link tải file</h2>
+    <input type="text" id="link" placeholder="Dán link vào đây">
+    <button onclick="taoLink()">Tạo link tải</button>
+    <a id="downloadLink" href="#" target="_blank"></a>
+</div>
+
+<script>
+    function taoLink() {
+        const link = document.getElementById("link").value;
+        const a = document.getElementById("downloadLink");
+
+        if (link) {
+            a.href = link;
+            a.textContent = "👉 Bấm vào đây để tải file";
+        } else {
+            alert("Vui lòng dán link!");
+        }
+    }
+</script>
+
+</body>
+</html>
