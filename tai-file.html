@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tải file</title>
+</head>
+<body>
+    <h2>Dán link tải file</h2>
+
+    <input type="text" id="link" placeholder="Dán link vào đây" style="width:300px;">
+    <br><br>
+    <button onclick="taiFile()">Tải file</button>
+
+    <script>
+        function taiFile() {
+            const link = document.getElementById("link").value;
+            if (link) {
+                window.open(link, "_blank");
+            } else {
+                alert("Chưa dán link!");
+            }
+        }
+    </script>
+</body>
+</html>
